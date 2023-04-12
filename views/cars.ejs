@@ -2,6 +2,7 @@
 <html lang="en">
     <%- include("./partials/head") %>
     <body>
+        <%- include("./partials/header") %>
         <main>
             <div>
                 <% data.map((item)=>{ %>
@@ -11,5 +12,6 @@
                 <% }) %>
             </div>
         </main>
+        <%- include("./partials/sidebar") %>
     </body>
 </html>
