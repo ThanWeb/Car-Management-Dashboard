@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+    <body>
+        <main>
+            <div>
+                <% data.map((item)=>{ %>
+                    <div>
+                        <img src="<%= item.image %>" alt="" title="">
+                    </div>
+                <% }) %>
+            </div>
+        </main>
+    </body>
+</html>

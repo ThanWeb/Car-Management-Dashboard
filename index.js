@@ -18,14 +18,13 @@ app.listen(PORT, () => {
     console.log('Press Ctrl-C to terminate\n')
 })
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+    res.render('index')
+})
+
+app.get('/cars', async (req, res) => {
     const cars = await Cars.findAll()
-    // return res.json({
-    //     status: 200,
-    //     message: 'Success',
-    //     data: cars
-    // })
-    res.render('index', {
+    res.render('cars', {
         data: cars
     })
 })
