@@ -124,6 +124,12 @@ img {
     cursor: pointer;
 }
 
+/* Main */
+
+.main {
+    padding: var(--header-height) 0 0 var(--header-height);
+}
+
 /* Sidebar */
 
 .sidebar {
