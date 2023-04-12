@@ -83,4 +83,19 @@ router.get("/:id", async (req, res, nexy) => {
     }
 })
 
+// DELETE
+router.delete("/:id", async (req, res, nexy) => {
+    const id = req.params.id
+    let note = await notes.findByPk(id)
+    if(!note) {
+        return res.status(404).json({status: 404, message: 'Data not found'})
+    }
+
+    await note.destroy()
+    res.json({
+        status: 200,
+        message: 'Success deleting data'
+    })
+})
+
 module.exports = router;
