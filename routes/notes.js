@@ -58,4 +58,29 @@ router.put("/:id", async (req, res, next) => {
     })
 });
 
+// GET NOTES
+router.get("/", async (req, res, nexy) => {
+    const result = await notes.findAll()
+    return res.json({
+        status: 200, 
+        message: 'Success getting all data',
+        data: result
+    })
+})
+
+// GET SINGLE NOTE
+router.get("/:id", async (req, res, nexy) => {
+    const id = req.params.id
+    let note = await notes.findByPk(id)
+    if(!note) {
+        return res.status(404).json({status: 404, message: 'Data not found'})
+    } else {
+        return res.json({
+            status: 200, 
+            message: 'Success getting note',
+            data: note
+        })
+    }
+})
+
 module.exports = router;
