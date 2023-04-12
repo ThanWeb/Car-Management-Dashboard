@@ -7,6 +7,12 @@
         <title>Exercise</title>
     </head>
     <body>
-        <h1>Hello <%= title %></h1>
+        <ul> 
+            <% data.map((item)=>{ %>
+              <li>
+                  <%= item.id %>
+              </li>
+            <% }) %>
+           </ul>
     </body>
 </html>

@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     Cars.init({
-        id: DataTypes.STRING,
+        id: {
+            allowNull: false,
+            primaryKey: true,
+            type: DataTypes.STRING
+        },
         plate: DataTypes.STRING,
         manufacture: DataTypes.STRING,
         model: DataTypes.STRING,
@@ -32,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         sequelize,
         modelName: 'Cars',
-        tableName: 'cars'
+        tableName: 'Cars'
     })
     return Cars
 }
