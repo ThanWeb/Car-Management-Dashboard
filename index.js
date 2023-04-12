@@ -20,5 +20,6 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`App Running on localhost: ${PORT}`)
+    console.log(`\nApp Running on localhost:${PORT}`)
+    console.log('Press Ctrl-C to terminate\n')
 })
