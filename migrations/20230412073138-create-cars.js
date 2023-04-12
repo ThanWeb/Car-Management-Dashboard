@@ -27,7 +27,7 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             description: {
-                type: Sequelize.STRING
+                type: Sequelize.TEXT
             },
             availableAt: {
                 type: Sequelize.STRING
@@ -45,10 +45,10 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             options: {
-                type: Sequelize.STRING
+                type: Sequelize.TEXT
             },
             specs: {
-                type: Sequelize.STRING
+                type: Sequelize.TEXT
             },
             createdAt: {
                 allowNull: false,

@@ -31,7 +31,8 @@ module.exports = (sequelize, DataTypes) => {
         specs: DataTypes.STRING
     }, {
         sequelize,
-        modelName: 'Cars'
+        modelName: 'Cars',
+        tableName: 'cars'
     })
     return Cars
 }

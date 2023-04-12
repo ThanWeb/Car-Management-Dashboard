@@ -1,6 +1,6 @@
 {
     "development": {
-        "username": "root",
+        "username": "postgres",
         "password": "root",
         "database": "db_car_management_dashboard",
         "host": "127.0.0.1",
