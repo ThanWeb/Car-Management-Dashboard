@@ -4,10 +4,30 @@
     <body>
         <%- include("./partials/header") %>
         <main class="main">
-            <div>
+            <div class="car-list">
                 <% data.map((item)=>{ %>
-                    <div>
-                        <img src="<%= item.image %>" alt="" title="">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="<%= item.image %>" alt="" title="">
+                        </div>
+                        <div class="car-info">
+                            <span class="model"><%= item.model %> / <%= item.type %></span>
+                            <span class="rent-price">Rp <%= item.rentPerDay %> / hari</span>
+                            <div class="last-update">
+                                <img src="icons/fi_clock.png" alt="Last Update" title="Last Update">
+                                <span>Updated at <%= item.updatedAt %></span>
+                            </div>
+                            <div class="buttons">
+                                <button type="button" class="delete-btn">
+                                    <img src="icons/fi_trash.png" alt="Delete" title="Delete">
+                                    <span>Delete</span>
+                                </button>
+                                <button type="button" class="edit-btn">
+                                    <img src="icons/fi_edit.png" alt="Edit" title="Edit">
+                                    <span>Edit</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 <% }) %>
             </div>
