@@ -20,6 +20,7 @@ module.exports = {
                     available: true,
                     type: 'Sedan',
                     year: 2022,
+                    size: 'Small',
                     options: [
                         'Cruise Control',
                         'Tinted Glass',
@@ -52,6 +53,7 @@ module.exports = {
                     available: false,
                     type: 'Convertible',
                     year: 2019,
+                    size: 'Small',
                     options: [
                         'Keyless Entry',
                         'Power Windows',
@@ -83,6 +85,7 @@ module.exports = {
                     available: true,
                     type: 'Sedan',
                     year: 2021,
+                    size: 'Medium',
                     options: [
                         'Bucket Seats',
                         'Airbag: Passenger',
@@ -119,6 +122,7 @@ module.exports = {
                     available: true,
                     type: 'Hatchback',
                     year: 2018,
+                    size: 'Large',
                     options: [
                         'Alloy Wheels',
                         'Power Locks',
@@ -155,6 +159,7 @@ module.exports = {
                     available: false,
                     type: 'Minivan',
                     year: 2020,
+                    size: 'Large',
                     options: [
                         'CD (Multi Disc)',
                         'Cruise Control',
@@ -186,6 +191,7 @@ module.exports = {
                     available: true,
                     type: 'Hatchback',
                     year: 2016,
+                    size: 'Medium',
                     options: [
                         'Leather Interior',
                         'A/C: Rear',
@@ -218,6 +224,7 @@ module.exports = {
                     available: false,
                     type: 'Sedan',
                     year: 2020,
+                    size: 'Small',
                     options: [
                         'AM/FM Stereo',
                         'Power Windows',
@@ -253,6 +260,7 @@ module.exports = {
                     available: true,
                     type: 'Regular Cab Pickup',
                     year: 2014,
+                    size: 'Medium',
                     options: [
                         'Fog Lights',
                         'Memory Seats',
@@ -285,6 +293,7 @@ module.exports = {
                     available: false,
                     type: 'Extended Cab Pickup',
                     year: 2012,
+                    size: 'Medium',
                     options: [
                         'CD (Multi Disc)',
                         'Keyless Entry',
@@ -319,6 +328,7 @@ module.exports = {
                     available: true,
                     type: 'Hatchback',
                     year: 2019,
+                    size: 'Medium',
                     options: [
                         'Third Row Seats',
                         'Bucket Seats',
@@ -350,6 +360,7 @@ module.exports = {
                     available: false,
                     type: 'Coupe',
                     year: 2019,
+                    size: 'Large',
                     options: [
                         'Alloy Wheels',
                         'Power Windows',
@@ -385,6 +396,7 @@ module.exports = {
                     available: true,
                     type: 'Passenger Van',
                     year: 2018,
+                    size: 'Large',
                     options: [
                         'Premium Sound',
                         'Fog Lights',
@@ -423,6 +435,7 @@ module.exports = {
                     available: true,
                     type: 'SUV',
                     year: 2017,
+                    size: 'Small',
                     options: [
                         'Memory Seats',
                         'Cassette Player',
@@ -454,6 +467,7 @@ module.exports = {
                     available: false,
                     type: 'Regular Cab Pickup',
                     year: 2020,
+                    size: 'Small',
                     options: [
                         'Bucket Seats',
                         'Power Seats',
@@ -488,6 +502,7 @@ module.exports = {
                     available: true,
                     type: 'Regular Cab Pickup',
                     year: 2017,
+                    size: 'Medium',
                     options: [
                         'Third Row Seats',
                         'CD (Single Disc)',
@@ -525,6 +540,7 @@ module.exports = {
                     available: true,
                     type: 'Convertible',
                     year: 2021,
+                    size: 'Small',
                     options: [
                         'Leather Interior',
                         'Alloy Wheels',
@@ -557,6 +573,7 @@ module.exports = {
                     available: false,
                     type: 'Regular Cab Pickup',
                     year: 2015,
+                    size: 'Large',
                     options: [
                         'Alarm',
                         'Airbag: Passenger',
@@ -592,6 +609,7 @@ module.exports = {
                     available: false,
                     type: 'Sedan',
                     year: 2014,
+                    size: 'Large',
                     options: [
                         'Moonroof/Sunroof',
                         'Cassette Player',
@@ -627,6 +645,7 @@ module.exports = {
                     available: false,
                     type: 'Convertible',
                     year: 2021,
+                    size: 'Medium',
                     options: [
                         'CD (Single Disc)',
                         'Airbag: Driver',
@@ -664,6 +683,7 @@ module.exports = {
                     available: false,
                     type: 'Crew Cab Pickup',
                     year: 2012,
+                    size: 'Medium',
                     options: [
                         'Navigation',
                         'Rear Window Wiper',
@@ -697,6 +717,7 @@ module.exports = {
                     available: false,
                     type: 'SUV',
                     year: 2013,
+                    size: 'Small',
                     options: [
                         'Memory Seats',
                         'Integrated Phone',
@@ -729,6 +750,7 @@ module.exports = {
                     available: false,
                     type: 'Coupe',
                     year: 2020,
+                    size: 'Small',
                     options: [
                         'Memory Seats',
                         'Power Locks',
@@ -766,6 +788,7 @@ module.exports = {
                     available: false,
                     type: 'Extended Cab Pickup',
                     year: 2022,
+                    size: 'Medium',
                     options: [
                         'Rear Window Defroster',
                         'MP3 (Single Disc)',
@@ -804,6 +827,7 @@ module.exports = {
                     available: false,
                     type: 'Sedan',
                     year: 2022,
+                    size: 'Medium',
                     options: [
                         'Moonroof/Sunroof',
                         'Power Seats',
@@ -838,6 +862,7 @@ module.exports = {
                     available: false,
                     type: 'Wagon',
                     year: 2015,
+                    size: 'Large',
                     options: [
                         'CD (Single Disc)',
                         'Airbag: Passenger',
