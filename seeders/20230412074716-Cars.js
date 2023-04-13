@@ -7,7 +7,7 @@ module.exports = {
             'Cars',
             [
                 {
-                    id: '6e2bc663-5197-441a-957b-bc75e4a2da7c',
+                    id: 1,
                     plate: 'DBH-3491',
                     manufacture: 'Ford',
                     model: 'F150',
@@ -40,7 +40,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '9ff03bbc-b18c-4ba7-8f3a-4c4b5c2f6c77',
+                    id: 2,
                     plate: 'WXB-3984',
                     manufacture: 'BMW',
                     model: 'X5',
@@ -72,7 +72,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'bf6b5c43-1377-4ae0-8908-310c64266f81',
+                    id: 3,
                     plate: 'OSL-4224',
                     manufacture: 'Lincoln',
                     model: 'MKZ',
@@ -109,7 +109,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '5b67f1d7-92d4-41c7-8577-4435740aadf1',
+                    id: 4,
                     plate: 'VPT-9753',
                     manufacture: 'BMW',
                     model: 'M5',
@@ -146,7 +146,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '23574b8f-3e89-4685-a348-67c1f7e5b3c4',
+                    id: 5,
                     plate: 'BHD-3923',
                     manufacture: 'Lincoln',
                     model: 'Navigator',
@@ -178,7 +178,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '3eead6db-c536-406b-9bc5-85d4c6e38a76',
+                    id: 6,
                     plate: 'JPM-5482',
                     manufacture: 'Ford',
                     model: 'Fiesta',
@@ -211,7 +211,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '752685ce-dd39-40e5-9af5-93fdd36dea7e',
+                    id: 7,
                     plate: 'BTW-1960',
                     manufacture: 'Honda',
                     model: 'Accord',
@@ -247,7 +247,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'd97e0af5-2728-4ce3-ba7f-9d83a0837db6',
+                    id: 8,
                     plate: 'YHD-4104',
                     manufacture: 'Lincoln',
                     model: 'Navigator',
@@ -280,7 +280,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '0d5de078-a5fc-456b-9487-47eb450a01c6',
+                    id: 9,
                     plate: 'STL-7347',
                     manufacture: 'Buick',
                     model: 'LaCrosse',
@@ -315,7 +315,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '6dfa349e-631c-46c0-a037-5c73902ff738',
+                    id: 10,
                     plate: 'TJW-7622',
                     manufacture: 'BMW',
                     model: 'X5',
@@ -347,7 +347,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '803593fb-b857-4a01-adc4-651538217a04',
+                    id: 11,
                     plate: 'YND-1892',
                     manufacture: 'Chevy',
                     model: 'Malibu',
@@ -383,7 +383,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'e0a96736-a2d5-40ca-87de-64b59cac85d8',
+                    id: 12,
                     plate: 'FZQ-1989',
                     manufacture: 'BMW',
                     model: 'X3',
@@ -422,7 +422,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'e39f2965-57da-4d8f-afdb-74f6c54e69f0',
+                    id: 13,
                     plate: 'GAG-1943',
                     manufacture: 'Chevy',
                     model: 'Malibu',
@@ -454,7 +454,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'c18a5545-2ce2-4330-aa3b-1bbcf6247519',
+                    id: 14,
                     plate: 'CVO-9549',
                     manufacture: 'Chevy',
                     model: 'Malibu',
@@ -489,7 +489,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '72530cba-051d-49d8-822b-deaf2e5330ca',
+                    id: 15,
                     plate: 'JWU-8459',
                     manufacture: 'Lincoln',
                     model: 'MKS',
@@ -527,7 +527,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '79cc327b-2b0f-4042-acdf-78386b2f8ebd',
+                    id: 16,
                     plate: 'VOS-8183',
                     manufacture: 'Chevy',
                     model: 'Silverado',
@@ -560,7 +560,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '22c969a7-04ce-4efb-a479-7ab3bc094cb9',
+                    id: 17,
                     plate: 'ENW-7713',
                     manufacture: 'Lincoln',
                     model: 'MKS',
@@ -596,7 +596,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '1bfda124-5175-4b90-bee7-d66affdbcc66',
+                    id: 18,
                     plate: 'TPM-8174',
                     manufacture: 'Dodge',
                     model: 'Ram',
@@ -632,7 +632,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '08cbd537-497f-4305-b7b4-e7493c703a2c',
+                    id: 19,
                     plate: 'ZAG-8112',
                     manufacture: 'Ford',
                     model: 'F150',
@@ -670,7 +670,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '950575d6-958c-422e-a46b-c3ed2e1315ed',
+                    id: 20,
                     plate: 'MRQ-2982',
                     manufacture: 'Audi',
                     model: 'A4',
@@ -704,7 +704,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'b89117fc-69e1-4366-ba21-9d6a0b2bfb04',
+                    id: 21,
                     plate: 'ACT-6027',
                     manufacture: 'Dodge',
                     model: 'Durango',
@@ -737,7 +737,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'fc1d3297-ab17-40a9-a79c-ca7307ed5faa',
+                    id: 22,
                     plate: 'LSI-6227',
                     manufacture: 'Audi',
                     model: 'S5',
@@ -775,7 +775,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '432d9ed1-e330-4953-ac33-f51a60a5799b',
+                    id: 23,
                     plate: 'OAI-9575',
                     manufacture: 'Toyota',
                     model: 'Camry',
@@ -814,7 +814,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: '32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf',
+                    id: 24,
                     plate: 'NHI-3883',
                     manufacture: 'Nissan',
                     model: 'Pathfiner',
@@ -849,7 +849,7 @@ module.exports = {
                     updatedAt: new Date()
                 },
                 {
-                    id: 'e76e884b-8f3e-4b90-a717-9239676d0191',
+                    id: 25,
                     plate: 'IDN-5442',
                     manufacture: 'Honda',
                     model: 'Civic',
