@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Management Dashboard</title>
+        <link rel="stylesheet" href="../../styles/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left-side">
+                <div class="logo"></div>
+                <div class="menu toggle-nav">
+                    <img src="../../icons/fi_menu.png" alt="Menu" title="Menu">
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="search">
+                    <div class="input-container">
+                        <img src="../../icons/fi_search.png" alt="Search" title="Search">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                    </div>
+                    <button type="button">
+                        Search
+                    </button>
+                </div>
+                <div class="account">
+                    <span class="avatar">U</span>
+                    <span>Unis Badri</span>
+                    <img src="../../icons/fi_chevron-down.png" alt="Show" title="Show">
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <nav class="cars-page-nav">
+                <h2>CARS</h2>
+                <ul>
+                    <li>List Car</li>
+                </ul>
+            </nav>
+            <div class="car-toolbar">
+                <div>
+                    <div class="nav-info">
+                        <span>Cars</span>
+                        <img src="../../icons/fi_chevron-right.png">
+                        <span>List Car</span>
+                        <img src="../../icons/fi_chevron-right.png">
+                        <span class="active">Add New Car</span>
+                    </div>
+                    <h2>Add New Car</h2>
+                </div>
+            </div>
+            <div>
+                <form action="/cars" method="POST">
+                    <div>
+                        <div>
+                            <label for="model">Nama*</label>
+                            <input type="text" id="model" name="model" placeholder="Avanza" required>
+                        </div>
+                        <div>
+                            <label for="rentPerDay">Sewa Per Hari*</label>
+                            <input type="number" id="rentPerDay" name="rentPerDay" placeholder="Rp 0.-" required>
+                        </div>
+                        <div>
+                            <label for="type">Tipe*</label>
+                            <input type="text" id="type" name="type" placeholder="Klasik" required>
+                        </div>
+                        <div>
+                            <label for="size">Ukuran</label>
+                            <select name="size" id="size" required>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="/cars">Cancel</a>
+                        <button type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside class="sidebar">
+            <div class="box"></div>
+            <a href="/" class="nav_button">
+                <img src="../../icons/fi_home.png" alt="Home" title="Home">
+                <span>Dashboard</span>
+            </a>
+            <a href="/cars" class="nav_button">
+                <img src="../../icons/fi_truck.png" alt="Cars" title="Cars">
+                <span>Cars</span>
+            </a>
+        </aside>
+        <script src="../../scripts/cars.js"></script>
+    </body>
+</html>

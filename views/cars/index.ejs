@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+    <body>
+        <%- include("../partials/header") %>
+        <main class="main">
+            <nav class="cars-page-nav">
+                <h2>CARS</h2>
+                <ul>
+                    <li>List Car</li>
+                </ul>
+            </nav>
+            <div class="car-toolbar">
+                <div>
+                    <div class="nav-info">
+                        <span>Cars</span>
+                        <img src="icons/fi_chevron-right.png">
+                        <span class="active">List Car</span>
+                    </div>
+                    <h2>List Car</h2>
+                    <div class="filter">
+                        <a href="">
+                            <button type="button">
+                                All
+                            </button>
+                        </a>
+                        <a href="">
+                            <button type="button">
+                                Small
+                            </button>
+                        </a>
+                        <a href="">
+                            <button type="button">
+                                Medium
+                            </button>
+                        </a>
+                        <a href="">
+                            <button type="button">
+                                Large
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="add-car">
+                    <a href="/cars/add">
+                        <button type="button">
+                            <img src="icons/fi_plus.png" alt="Tambah" title="Tambah">
+                            <span>Add New Car</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="car-list">
+                <% data.map((item)=>{ %>
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="<%= item.image %>" alt="" title="">
+                        </div>
+                        <div class="car-info">
+                            <span class="model"><%= item.model %> / <%= item.type %></span>
+                            <span class="rent-price">Rp <span class="rent-per-day-value"><%= item.rentPerDay %></span> / hari</span>
+                            <div class="last-update">
+                                <img src="icons/fi_clock.png" alt="Last Update" title="Last Update">
+                                <span>Updated at <span class="last-update-value"><%= item.updatedAt %></span></span>
+                            </div>
+                            <div class="buttons">
+                                <a href="/">
+                                <button type="button" class="delete-btn">
+                                    <img src="icons/fi_trash.png" alt="Delete" title="Delete">
+                                    <span>Delete</span>
+                                </button>
+                                </a>
+                                <a href="/cars/edit/<%= item.id %>">
+                                    <button type="button" class="edit-btn">
+                                        <img src="icons/fi_edit.png" alt="Edit" title="Edit">
+                                        <span>Edit</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </main>
+        <%- include("../partials/sidebar") %>
+        <script src="scripts/cars.js"></script>
+    </body>
+</html>

@@ -1,7 +1,6 @@
 const toggleNavBtn = document.querySelector('.toggle-nav')
 
 const toggleNav = () => {
-    console.log('test')
     const main = document.querySelector('.main')
     main.classList.toggle('active')
 }
@@ -19,7 +18,6 @@ const formattingRentPerDay = () => {
 const formattingLastUpdate = () => {
     let tempValue = ''
     const eachLastUpdate = document.querySelectorAll('.car-info .last-update-value')
-    console.log(eachLastUpdate[1].innerHTML)
     for (let index = 0; index < eachLastUpdate.length; index++) {
         tempValue = eachLastUpdate[index].innerHTML
         tempValue = `${tempValue.slice(8, 10)} ${tempValue.slice(4, 7)} ${tempValue.slice(11, 15)}, ${tempValue.slice(16, 21)}`

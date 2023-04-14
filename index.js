@@ -23,8 +23,52 @@ app.get('/', (req, res) => {
 })
 
 app.get('/cars', async (req, res) => {
-    const cars = await Cars.findAll()
+    const cars = await Cars.findAll({
+        order: [
+            ['model', 'ASC']
+        ]
+    })
     res.render('cars', {
         data: cars
     })
+})
+
+app.post('/cars', (req, res) => {
+    const { model, rentPerDay, type, size } = req.body
+    Cars.create({
+        model,
+        rentPerDay,
+        type,
+        size
+    })
+    res.redirect('/cars')
+})
+
+app.get('/cars/add', (req, res) => {
+    res.render('cars/create')
+})
+
+app.get('/cars/edit/:id', async (req, res) => {
+    const data = await Cars.findByPk(req.params.id)
+    const carDetail = data.dataValues
+    res.render('cars/update', {
+        carDetail,
+        sizeOptions: ['small', 'medium', 'large']
+    })
+})
+
+app.post('/edit/:id', (req, res) => {
+    const { model, rentPerDay, type, size } = req.body
+    const id = (req.params.id)
+    Cars.update({
+        model,
+        rentPerDay,
+        type,
+        size
+    }, {
+        where: {
+            id
+        }
+    })
+    res.redirect('/cars')
 })
