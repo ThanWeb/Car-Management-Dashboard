@@ -399,7 +399,6 @@ button {
 }
 
 .car-info .buttons button {
-    width: 100%;
     display: flex;
     padding: 14px 0;
     outline: none;
@@ -411,6 +410,7 @@ button {
 }
 
 .car-info .delete-btn {
+    width: 50%;
     color: var(--red);
     border: 1px solid var(--red);
     background-color: white;
@@ -418,8 +418,76 @@ button {
 
 .car-info .edit-btn {
     color: white;
+    width: 100%;
     border: 1px solid var(--green);
     background-color: var(--green);
+}
+
+.car-delete-modal {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.car-delete-modal.active {
+    z-index: 10;
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.car-delete-modal > div {
+    width: 380px;
+    margin: auto;
+    display: flex;
+    padding: 24px;
+    row-gap: 24px;
+    text-align: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.car-delete-modal img {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.car-delete-modal h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.car-delete-modal p {
+    font-weight: 300;
+}
+
+.car-delete-modal .buttons {
+    display: flex;
+    column-gap: 16px;
+    justify-content: center;
+}
+
+.car-delete-modal .buttons a, .car-delete-modal .buttons button {
+    width: 88px;
+    font-weight: 700;
+    padding: 8px 24px;
+}
+
+.car-delete-modal .confirm-delete-btn {
+    color: white;
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+}
+
+.car-delete-modal .cancel-delete-btn {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    background-color: white
 }
 
 /* Sidebar */

@@ -72,3 +72,18 @@ app.post('/edit/:id', (req, res) => {
     })
     res.redirect('/cars')
 })
+
+app.get('/delete/:id', (req, res) => {
+    const id = req.params.id
+    try {
+        Cars.destroy({
+            where: {
+                id
+            }
+        })
+    } catch (error) {
+        console.log('error')
+    } finally {
+        res.redirect('/cars')
+    }
+})
