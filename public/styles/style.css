@@ -6,6 +6,7 @@
     --red: #FA2C5A;
     --green: #5CB85F;
     --blue: #0D28A6;
+    --lightblue: #AEB7E1;
     --gray: #CFD4ED;
 }
 
@@ -26,6 +27,14 @@ body {
 
 img {
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* Header */
@@ -97,7 +106,6 @@ img {
 .header .search button {
     color: var(--blue);
     border: 1px solid var(--blue);
-    cursor: pointer;
     padding: 8px 12px;
     font-size: 14px;
     font-weight: 700;
@@ -135,8 +143,11 @@ img {
 /* Main */
 
 .main {
+    display: flex;
     padding: 32px 24px;
+    min-height: calc(100vh - var(--header-height));
     transition: .3s;
+    flex-direction: column;
 }
 
 .main.active {
@@ -175,6 +186,137 @@ img {
     padding: 12px 24px;
     background: #CFD4ED;
     list-style: none;
+}
+
+.car-toolbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+
+.car-toolbar .nav-info {
+    display: flex;
+    column-gap: 4px;
+    font-weight: 700;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.car-toolbar .nav-info .active {
+    font-weight: 300;
+}
+
+.car-toolbar .nav-info img {
+    width: 18px;
+    height: 18px;
+}
+
+.car-toolbar h2 {
+    margin-bottom: 24px;
+}
+
+.car-toolbar .filter {
+    display: flex;
+    column-gap: 16px;
+}
+
+.car-toolbar .filter button {
+    color: var(--lightblue);
+    border: 1px solid var(--lightblue);
+    padding: 8px 12px;
+    background-color: white;
+}
+
+.car-toolbar .add-car {
+    height: fit-content;
+}
+
+.car-toolbar .add-car button {
+    color: white;
+    display: flex;
+    padding: 8px 12px;
+    column-gap: 12px;
+    border-width: 0;
+    border-radius: 2px;
+    background-color: var(--blue);
+}
+
+.car-toolbar .add-car img {
+    width: 18px;
+    height: 18px;
+}
+
+.car-form {
+    display: flex;
+    flex-grow: 1;
+}
+
+.car-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-form form > div:nth-child(1) {
+    padding: 16px;
+    flex-direction: column;
+    background-color: white;
+}
+
+.car-form .input-field {
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.car-form .input-field label {
+    width: 15%;
+}
+
+.car-form .input-field div {
+    width: 35%;
+    border: 1px solid #D0D0D0;
+    padding: 8px 12px;
+    border-radius: 2px;
+}
+
+.car-form .input-field input, .car-form .input-field select {
+    width: 100%;
+    border-width: 0;
+}
+
+.car-form .input-field input:focus, .ca .input-field select:focus {
+    outline: none;
+}
+
+.car-form .buttons {
+    display: flex;
+    column-gap: 24px;
+}
+
+.car-form .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.car-form .cancel-btn {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    display: block;
+    background-color: white;
+}
+
+.car-form .save-btn {
+    color: white;
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
 }
 
 .car-list {
@@ -251,9 +393,13 @@ img {
     column-gap: 16px;
 }
 
-.car-info .buttons button {
+.car-info .buttons a {
     width: 50%;
-    cursor: pointer;
+    display: block;
+}
+
+.car-info .buttons button {
+    width: 100%;
     display: flex;
     padding: 14px 0;
     outline: none;
@@ -321,7 +467,6 @@ img {
     width: 24px;
     color: white;
     aspect-ratio: 1 / 1;
-    text-decoration: none;
 }
 
 .sidebar img {

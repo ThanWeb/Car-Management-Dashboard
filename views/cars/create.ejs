@@ -51,33 +51,41 @@
                     <h2>Add New Car</h2>
                 </div>
             </div>
-            <div>
+            <div class="car-form">
                 <form action="/cars" method="POST">
                     <div>
-                        <div>
+                        <div class="input-field">
                             <label for="model">Nama*</label>
-                            <input type="text" id="model" name="model" placeholder="Avanza" required>
+                            <div>
+                                <input type="text" id="model" name="model" placeholder="Avanza" required>
+                            </div>
                         </div>
-                        <div>
+                        <div class="input-field">
                             <label for="rentPerDay">Sewa Per Hari*</label>
-                            <input type="number" id="rentPerDay" name="rentPerDay" placeholder="Rp 0.-" required>
+                            <div>
+                                <input type="number" id="rentPerDay" name="rentPerDay" placeholder="Rp 0.-" required>
+                            </div>
                         </div>
-                        <div>
+                        <div class="input-field">
                             <label for="type">Tipe*</label>
-                            <input type="text" id="type" name="type" placeholder="Klasik" required>
+                            <div>
+                                <input type="text" id="type" name="type" placeholder="Klasik" required>
+                            </div>
                         </div>
-                        <div>
-                            <label for="size">Ukuran</label>
-                            <select name="size" id="size" required>
-                                <option value="Small">Small</option>
-                                <option value="Medium">Medium</option>
-                                <option value="Large">Large</option>
-                            </select>
+                        <div class="input-field">
+                            <label for="size">Ukuran*</label>
+                            <div>
+                                <select name="size" id="size" required>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <a href="/cars">Cancel</a>
-                        <button type="submit">Save</button>
+                    <div class="buttons">
+                        <a href="/cars" class="cancel-btn btn">Cancel</a>
+                        <button type="submit" class="save-btn btn">Save</button>
                     </div>
                 </form>
             </div>

@@ -51,43 +51,51 @@
                     <h2>Update Car Information</h2>
                 </div>
             </div>
-            <div>
+            <div class="car-form">
                 <form action="/edit/<%= carDetail.id %>" method="POST">
                     <div>
-                        <div>
+                        <div class="input-field">
                             <label for="model">Nama*</label>
-                            <input type="text" id="model" name="model" placeholder="Avanza" value="<%= carDetail.model %>" required>
+                            <div>
+                                <input type="text" id="model" name="model" placeholder="Avanza" value="<%= carDetail.model %>" required>
+                            </div>
                         </div>
-                        <div>
+                        <div class="input-field">
                             <label for="rentPerDay">Sewa Per Hari*</label>
-                            <input type="number" id="rentPerDay" name="rentPerDay" placeholder="Rp 0.-" value="<%= carDetail.rentPerDay %>" required>
+                            <div>
+                                <input type="number" id="rentPerDay" name="rentPerDay" placeholder="Rp 0.-" value="<%= carDetail.rentPerDay %>" required>
+                            </div>
                         </div>
-                        <div>
+                        <div class="input-field">
                             <label for="type">Tipe*</label>
-                            <input type="text" id="type" name="type" placeholder="Klasik" value="<%= carDetail.type %>" required>
+                            <div>
+                                <input type="text" id="type" name="type" placeholder="Klasik" value="<%= carDetail.type %>" required>
+                            </div>
                         </div>
-                        <div>
+                        <div class="input-field">
                             <label for="size">Ukuran</label>
-                            <select name="size" id="size" required>
-                                <% if (carDetail.size === 'Small') { %>
-                                    <option value="Small" selected>Small</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="Large">Large</option>
-                                <% } else if(carDetail.size === 'Medium') { %>
-                                    <option value="Small">Small</option>
-                                    <option value="Medium" selected>Medium</option>
-                                    <option value="Large">Large</option>
-                                <% } else { %>
-                                    <option value="Small">Small</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="Large" selected>Large</option>
-                                <% } %>
-                            </select>
+                            <div>
+                                <select name="size" id="size" required>
+                                    <% if (carDetail.size === 'Small') { %>
+                                        <option value="Small" selected>Small</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Large">Large</option>
+                                    <% } else if(carDetail.size === 'Medium') { %>
+                                        <option value="Small">Small</option>
+                                        <option value="Medium" selected>Medium</option>
+                                        <option value="Large">Large</option>
+                                    <% } else { %>
+                                        <option value="Small">Small</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Large" selected>Large</option>
+                                    <% } %>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <a href="/cars">Cancel</a>
-                        <button type="submit">Save</button>
+                    <div class="buttons">
+                        <a href="/cars" class="cancel-btn btn">Cancel</a>
+                        <button type="submit" class="save-btn btn">Save</button>
                     </div>
                 </form>
             </div>
