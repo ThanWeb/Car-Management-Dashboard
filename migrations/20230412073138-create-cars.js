@@ -9,12 +9,6 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 autoIncrement: true
             },
-            plate: {
-                type: Sequelize.STRING
-            },
-            manufacture: {
-                type: Sequelize.STRING
-            },
             model: {
                 type: Sequelize.STRING
             },
@@ -24,35 +18,11 @@ module.exports = {
             rentPerDay: {
                 type: Sequelize.INTEGER
             },
-            capacity: {
-                type: Sequelize.INTEGER
-            },
-            description: {
-                type: Sequelize.TEXT
-            },
-            availableAt: {
-                type: Sequelize.STRING
-            },
-            transmission: {
-                type: Sequelize.STRING
-            },
-            available: {
-                type: Sequelize.BOOLEAN
-            },
             type: {
                 type: Sequelize.STRING
             },
-            year: {
-                type: Sequelize.INTEGER
-            },
             size: {
                 type: Sequelize.STRING
-            },
-            options: {
-                type: Sequelize.TEXT
-            },
-            specs: {
-                type: Sequelize.TEXT
             },
             createdAt: {
                 allowNull: false,

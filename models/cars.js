@@ -20,21 +20,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             autoIncrement: true
         },
-        plate: DataTypes.STRING,
-        manufacture: DataTypes.STRING,
         model: DataTypes.STRING,
         image: DataTypes.STRING,
         rentPerDay: DataTypes.INTEGER,
-        capacity: DataTypes.INTEGER,
-        description: DataTypes.TEXT,
-        availableAt: DataTypes.STRING,
-        transmission: DataTypes.STRING,
-        available: DataTypes.BOOLEAN,
         type: DataTypes.STRING,
-        year: DataTypes.INTEGER,
-        size: DataTypes.STRING,
-        options: DataTypes.TEXT,
-        specs: DataTypes.TEXT
+        size: DataTypes.STRING
     }, {
         sequelize,
         modelName: 'Cars',
