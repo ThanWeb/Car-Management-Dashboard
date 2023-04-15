@@ -19,9 +19,9 @@
                 <div class="search">
                     <div class="input-container">
                         <img src="../../icons/fi_search.png" alt="Search" title="Search">
-                        <input type="text" name="search" id="search" placeholder="Search">
+                        <input type="text" name="search" id="search" placeholder="Search" class="search-input">
                     </div>
-                    <button type="button">
+                    <button type="button" class="search-btn">
                         Search
                     </button>
                 </div>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="car-form">
-                <form action="/edit/<%= carDetail.id %>" method="POST">
+                <form action="/edit/<%= carDetail.id %>" method="POST" enctype="multipart/form-data">
                     <div>
                         <div class="input-field">
                             <label for="model">Nama*</label>
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div class="input-field">
-                            <label for="size">Ukuran</label>
+                            <label for="size">Ukuran*</label>
                             <div>
                                 <select name="size" id="size" required>
                                     <% if (carDetail.size === 'Small') { %>
@@ -91,6 +91,13 @@
                                     <% } %>
                                 </select>
                             </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="image">Gambar*</label>
+                            <div>
+                                <input type="file" id="image" name="image">
+                            </div>
+                            <span>File size max. 2MB</span>
                         </div>
                     </div>
                     <div class="buttons">

@@ -37,6 +37,11 @@ button {
     cursor: pointer;
 }
 
+option:focus {
+    border-width: 0;
+    outline: none;
+}
+
 /* Header */
 
 .header {
@@ -288,6 +293,7 @@ button {
     width: 35%;
     border: 1px solid #D0D0D0;
     padding: 8px 12px;
+    margin-right: 24px;
     border-radius: 2px;
 }
 

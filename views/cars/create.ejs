@@ -19,9 +19,9 @@
                 <div class="search">
                     <div class="input-container">
                         <img src="../../icons/fi_search.png" alt="Search" title="Search">
-                        <input type="text" name="search" id="search" placeholder="Search">
+                        <input type="text" name="search" id="search" placeholder="Search" class="search-input">
                     </div>
-                    <button type="button">
+                    <button type="button" class="search-btn">
                         Search
                     </button>
                 </div>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="car-form">
-                <form action="/cars" method="POST">
+                <form action="/cars" method="POST" enctype="multipart/form-data">
                     <div>
                         <div class="input-field">
                             <label for="model">Nama*</label>
@@ -81,6 +81,13 @@
                                     <option value="Large">Large</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="image">Gambar*</label>
+                            <div>
+                                <input type="file" id="image" name="image" required>
+                            </div>
+                            <span>File size max. 2MB</span>
                         </div>
                     </div>
                     <div class="buttons">

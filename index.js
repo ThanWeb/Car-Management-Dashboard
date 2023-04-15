@@ -6,6 +6,9 @@ const PORT = 3000
 const { Op } = require('sequelize')
 const { Cars } = require('./models')
 
+const imagekit = require('./lib/imagekit')
+const upload = require('./middleware/uploader')
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -63,15 +66,25 @@ app.get('/cars', async (req, res) => {
     })
 })
 
-app.post('/cars', (req, res) => {
+app.post('/cars', upload.single('image'), async (req, res) => {
     const { model, rentPerDay, type, size } = req.body
-    Cars.create({
+    const file = req.file
+
+    const splitedFile = file.originalname.split('.')
+    const ext = splitedFile[splitedFile.length - 1]
+    const image = await imagekit.upload({
+        file: file.buffer,
+        fileName: `img-${Date.now()}.${ext}`
+    })
+
+    await Cars.create({
         model,
         rentPerDay,
         type,
-        size
+        size,
+        image: image.url
     })
-    res.redirect('/cars')
+    await res.redirect('/cars')
 })
 
 app.get('/cars/add', (req, res) => {
@@ -81,26 +94,51 @@ app.get('/cars/add', (req, res) => {
 app.get('/cars/edit/:id', async (req, res) => {
     const data = await Cars.findByPk(req.params.id)
     const carDetail = data.dataValues
-    res.render('cars/update', {
+    await res.render('cars/update', {
         carDetail,
         sizeOptions: ['small', 'medium', 'large']
     })
 })
 
-app.post('/edit/:id', (req, res) => {
+app.post('/edit/:id', upload.single('image'), async (req, res) => {
     const { model, rentPerDay, type, size } = req.body
-    const id = (req.params.id)
-    Cars.update({
-        model,
-        rentPerDay,
-        type,
-        size
-    }, {
-        where: {
-            id
-        }
-    })
-    res.redirect('/cars')
+
+    if (req.file) {
+        const file = req.file
+        const splitedFile = file.originalname.split('.')
+        const ext = splitedFile[splitedFile.length - 1]
+        const image = await imagekit.upload({
+            file: file.buffer,
+            fileName: `img-${Date.now()}.${ext}`
+        })
+
+        const id = (req.params.id)
+        await Cars.update({
+            model,
+            rentPerDay,
+            type,
+            size,
+            image: image.url
+        }, {
+            where: {
+                id
+            }
+        })
+    } else {
+        const id = (req.params.id)
+        await Cars.update({
+            model,
+            rentPerDay,
+            type,
+            size
+        }, {
+            where: {
+                id
+            }
+        })
+    }
+
+    await res.redirect('/cars')
 })
 
 app.get('/delete/:id', (req, res) => {
