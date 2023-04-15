@@ -1,0 +1,4 @@
+-- Fitur filter dan search pake query
+-- Styling sekalian button filter, klo lgi aktif, input search juga
+-- Munculin notifikasi saat create, update or delete cars
+-- Taruh link setiap page, setiap endpoint rest API dan contoh req body dan res bodynya

@@ -228,6 +228,12 @@ button {
     background-color: white;
 }
 
+.car-toolbar .filter .active button {
+    color: var(--blue);
+    font-weight: 700;
+    background-color: var(--gray);
+}
+
 .car-toolbar .add-car {
     height: fit-content;
 }
@@ -321,11 +327,12 @@ button {
 
 .car-list {
     gap: 24px;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .car-card {
+    width: calc(100% / 3 - 16px);
     display: flex;
     padding: 24px;
     row-gap: 16px;

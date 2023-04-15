@@ -19,22 +19,22 @@
                     </div>
                     <h2>List Car</h2>
                     <div class="filter">
-                        <a href="">
+                        <a href="/cars" class="<%= filter === '' ? 'active' : ''%>">
                             <button type="button">
                                 All
                             </button>
                         </a>
-                        <a href="">
+                        <a href="/cars?filter=small" class="<%= filter === 'Small' ? 'active' : ''%>">
                             <button type="button">
                                 Small
                             </button>
                         </a>
-                        <a href="">
+                        <a href="/cars?filter=medium" class="<%= filter === 'Medium' ? 'active' : ''%>">
                             <button type="button">
                                 Medium
                             </button>
                         </a>
-                        <a href="">
+                        <a href="/cars?filter=large" class="<%= filter === 'Large' ? 'active' : ''%>">
                             <button type="button">
                                 Large
                             </button>

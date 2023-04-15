@@ -3,7 +3,7 @@ const path = require('path')
 const app = express()
 const PORT = 3000
 
-// eslint-disable-next-line no-unused-vars
+const { Op } = require('sequelize')
 const { Cars } = require('./models')
 
 app.use(express.json())
@@ -23,13 +23,31 @@ app.get('/', (req, res) => {
 })
 
 app.get('/cars', async (req, res) => {
-    const cars = await Cars.findAll({
-        order: [
-            ['model', 'ASC']
-        ]
-    })
+    let cars = []
+    let queryFilter = ''
+
+    if (req.query.filter) {
+        queryFilter = req.query.filter[0].toUpperCase() + req.query.filter.slice(1)
+        cars = await Cars.findAll({
+            where: {
+                size: {
+                    [Op.substring]: queryFilter
+                }
+            },
+            order: [
+                ['model', 'ASC']
+            ]
+        })
+    } else {
+        cars = await Cars.findAll({
+            order: [
+                ['model', 'ASC']
+            ]
+        })
+    }
     res.render('cars', {
-        data: cars
+        data: cars,
+        filter: queryFilter
     })
 })
 
