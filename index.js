@@ -38,6 +38,18 @@ app.get('/cars', async (req, res) => {
                 ['model', 'ASC']
             ]
         })
+    } else if (req.query.search) {
+        cars = await Cars.findAll({
+            where: {
+                [Op.or]: [
+                    { model: { [Op.iLike]: req.query.search } },
+                    { type: { [Op.iLike]: req.query.search } }
+                ]
+            },
+            order: [
+                ['model', 'ASC']
+            ]
+        })
     } else {
         cars = await Cars.findAll({
             order: [
